@@ -57,10 +57,10 @@ public-report-style 스킬, 금액·날짜는 [format-convert 안내](../public-
 - 백지 생성물도 원본 개념이 없을 뿐 결과물 관리는 동일: 사용자가 지정한
   위치에 저장하고 경로를 알려준다
 
-## 디자인 선택
+## 두 디자인의 실제 생성과 선택
 
-문서 종류와 별개로 public-report-style의 디자인 선택을 따른다. 미지정 시 기존
-**기본 보고서형**을 유지한다. **섹션 구분형**을 선택하면
-[섹션 구분형 명세](../public-report-style/references/sectioned-layout.md)의 생성·편집 경로를 쓴다.
-기존 generate_numbered.py는 기본형 경로이며 섹션형에 기본형의 번호·24mm 제목 높이
-후처리를 강제하지 않는다. 이미 제공된 양식이나 디자인 선택을 다시 묻지 않는다.
+새 문서의 디자인 미지정 시 public-report-style의 선택 안내를 따른다. 이미 선택했으면
+다시 묻지 않는다. 공통 입력은 `# 제목 / ## 섹션 / ### 소제목 / - 설명`이다.
+`generate_numbered.py content.md --style basic-report|sectioned --out result.hwpx`로 생성한다.
+기본형에는 중첩 순서 목록 입력도 그대로 사용할 수 있다.
+스타일별 미리보기는 public-report-style/styles/<id>/preview.png에서 확인한다.

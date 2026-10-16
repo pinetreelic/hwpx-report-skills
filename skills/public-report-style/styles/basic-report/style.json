@@ -1,0 +1,6 @@
+{
+  "id": "basic-report",
+  "name": "기본 보고서형",
+  "description": "파란 제목 띠와 번호 중심 구성",
+  "engine": "basic"
+}

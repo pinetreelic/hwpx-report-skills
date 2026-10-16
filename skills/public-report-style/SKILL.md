@@ -1,6 +1,6 @@
 ---
 name: public-report-style
-description: "공공기관 보고서·계획서의 번호·표기·제목·문단 배치를 맞춘다. 기본 보고서형과 섹션 구분형 디자인을 선택하며 미지정 시 기본 보고서형을 유지한다. 새 파일 생성은 hwpx-create, 기존 파일 수정은 hwpx-edit와 연결하며 기관 지정 양식과 사용자 지정 형식을 우선한다."
+description: "공공기관 보고서·계획서의 번호·표기·제목·문단 배치를 맞춘다. 기본 보고서형과 섹션 구분형 디자인을 지원한다. 새 문서의 디자인 미지정 시 선택을 안내하고 기본 추천은 기본 보고서형이다. 새 파일 생성은 hwpx-create, 기존 파일 수정은 hwpx-edit와 연결하며 기관 지정 양식과 사용자 지정 형식을 우선한다."
 ---
 
 <!-- Copyright 2026 6aneffy (upstream material). Modified by Soonlee, 2026-10-15: renamed/rerouted skills and report layout or portable distribution references. SPDX-License-Identifier: Apache-2.0. See LICENSE and NOTICE in the containing skill directory. -->
@@ -26,18 +26,22 @@ kordoc CLI는 `node <runtime>/node/node_modules/kordoc/dist/cli.js ...`로 호�
 
 ## 디자인 선택
 
-문서 종류와 디자인은 별개다. 같은 보고서·계획서에도 아래 형식을 선택할 수 있다.
+문서 종류와 디자인은 별개다. 새 문서에서 사용자가 스타일을 지정하지 않았고
+기관 양식도 없다면 아래 두 가지를 미리보기와 함께 한 번 묻는다.
 
-| 선택 이름 | 내부 식별자 | 구성 |
-|---|---|---|
-| 기본 보고서형 | `basic-report` | 기존 파란 제목 띠와 번호 중심 본문. 지정하지 않으면 이 형식 |
-| 섹션 구분형 | `sectioned` | 두 단 제목, 장식된 로마숫자 섹션 제목, 숫자 소제목과 글머리표 본문 |
+- **기본 보고서형** (`basic-report`): 파란 제목 띠와 번호 중심 구성
+- **섹션 구분형** (`sectioned`): 로마숫자 섹션 상자와 소제목·글머리표 구성
+- **알아서 선택**: 짧고 연속적인 항목은 기본형, 큰 주제가 나뉘면 섹션형을 추천
 
-사용자가 선택한 형식은 생성·후처리·검증까지 유지한다. 문서 종류만으로 형식을 바꾸거나,
-기존 파일의 내용 수정 요청에 디자인을 자동 적용하지 않는다. 기관 지정 양식은 우선한다.
-- **기본 보고서형**: [공통 문단 규칙](references/paragraph-layout.md)을 따른다.
-- **섹션 구분형**: [섹션 구분형 구성](references/sectioned-layout.md)을 따른다.
-  기본형의 번호·제목 높이 후처리를 그대로 적용하지 않는다.
+선택 UI가 없으면 같은 내용을 짧은 번호 목록으로 묻는다. 사용자가 이미 선택했거나
+기존 양식을 제공하면 다시 묻지 않는다. 기본 추천값은 기존 기본 보고서형이다.
+`generate_numbered.py --list-styles`로 설치된 스타일 목록을 읽고 각 `styles/<id>/preview.png`를
+보여줄 수 있다. 명시한 형식은 생성·후처리·검증까지 유지한다.
+기관 양식·기존 문서 내용 수정에는 디자인을 자동 변경하지 않는다.
+
+- [기본 보고서형 생성 규칙](references/paragraph-layout.md)
+- [섹션 구분형 생성 규칙](references/sectioned-layout.md)
+- [새 스타일 추가 방법](styles/README.md)
 
 ## 글머리 위계와 문단 배치
 

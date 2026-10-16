@@ -1,0 +1,9 @@
+{
+  "id": "sectioned",
+  "name": "섹션 구분형",
+  "description": "로마숫자 섹션 상자와 소제목·글머리표 구성",
+  "engine": "sectioned",
+  "title_color": "#3057B9",
+  "section_color": "#0000FF",
+  "section_fill": "#D6EAFE"
+}

@@ -8,7 +8,7 @@ from pathlib import Path
 import zipfile
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = '0.1.1'
+VERSION = '0.1.2'
 FILES = {'README.md', 'LICENSE', 'NOTICE', 'CHANGES.md', 'VERIFICATION.md',
          'install.py', 'requirements-runtime.txt', 'runtime-versions.json', '.gitignore', '.gitattributes'}
 DIRECTORIES = {'skills', 'examples', 'tests', 'tools', '.github'}

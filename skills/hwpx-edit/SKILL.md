@@ -283,3 +283,11 @@ kordoc 설치 안내 (`npm install -g kordoc`, Node 18+) — read 오류 메시�
 디자인 변경을 명시하면 public-report-style의 해당 명세를 읽고 적용한다.
 [섹션 구분형 명세](../public-report-style/references/sectioned-layout.md)는 문서 종류와 무관하다.
 기존 번호의 본문 상호참조를 확인하고, 기본형 전용 후처리를 섹션형에 섞지 않는다.
+
+## 두 디자인의 실제 생성과 선택
+
+새 문서의 디자인 미지정 시 public-report-style의 선택 안내를 따른다. 이미 선택했으면
+다시 묻지 않는다. 공통 입력은 `# 제목 / ## 섹션 / ### 소제목 / - 설명`이다.
+`generate_numbered.py content.md --style basic-report|sectioned --out result.hwpx`로 생성한다.
+섹션 구분형도 실제 생성 옵션으로 지원하며 지침만 제공하는 상태가 아니다.
+스타일별 미리보기는 public-report-style/styles/<id>/preview.png에서 확인한다.
