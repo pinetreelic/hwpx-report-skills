@@ -68,4 +68,5 @@ py -3 install.py --setup-runtime
 
 관리·개선: [Sawyer Lee (@pinetreelic)](https://github.com/pinetreelic).
 [hwpx-kit](https://github.com/6aneffy/hwpx-kit) 기반 · Apache-2.0.
+문서 생성 엔진: [kordoc](https://github.com/chrisryugj/kordoc) · MIT.
 원저작권과 재배포 고지는 [LICENSE](LICENSE)·[NOTICE](NOTICE)에 있습니다.
