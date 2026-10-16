@@ -1,0 +1,19 @@
+# 검증 기록 — 2026-10-15
+
+- macOS에서 임시 스킬 경로로 네 스킬 설치 성공. 기존 동명 폴더 덮어쓰기 거부 확인.
+- SKILL.md 네 개의 메타데이터와 모든 상대 참조 링크 확인.
+- 임시 설치된 스크립트로 한 줄/두 줄 제목 HWPX 생성 및 구조 검증 통과.
+- 검증 런타임: 기존 설치의 hwpx-kit-cli 0.13.1, python-hwpx 2.29.2, kordoc 4.9.0을 명시적으로 지정.
+- macOS의 새 venv/npm 경로에서 --setup-runtime으로 고정 버전 의존성을 설치하고 --check 통과.
+- 새 격리 런타임에서 한 줄/두 줄 생성, 제목 셀 6803 HWPUNIT, 렌더의 문단 간격 27/33/39pt 검증 통과.
+- macOS 기본 Python 3.9에서 런타임 설치를 요청하면 복사 전 중단하도록 사전 검사 추가.
+- 제목 셀 높이 6803 HWPUNIT와 본문 문단 간격의 저장 및 근사 렌더를 확인.
+- 기관 원본문서, 인증정보, 실행환경 바이너리 및 글꼴을 묶음에서 제외.
+- GitHub Actions에서 macOS·Windows·Linux 모두 새 격리 런타임 설치와 문서 생성·구조·근사 렌더 검사 통과.
+- 검증된 실행 코드 커밋: cbb629f56c92151416e12ff90f1286b9356c0e7a.
+- 한글 네이티브 조판 및 DOCX/PPT/XLSX 출력은 별도 미검증.
+
+GitHub Actions에서 macOS/Windows/Linux 설치·생성 회귀를 실행한다.
+한글 실물 조판, DOCX/PPT/XLSX 출력은 별도 확인이 필요하다.
+
+최신 설치·생성 검증: https://github.com/pinetreelic/hwpx-report-skills/actions

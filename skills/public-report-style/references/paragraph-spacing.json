@@ -1,0 +1,12 @@
+{
+  "body_line_percent": 160,
+  "note_line_percent": 140,
+  "before_pt": {
+    "first_item": 0,
+    "new_major": 15,
+    "return_to_parent_level": 9,
+    "same_group_or_first_child": 3,
+    "note": 2
+  },
+  "after_pt": 0
+}

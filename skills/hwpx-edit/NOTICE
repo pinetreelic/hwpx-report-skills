@@ -1,0 +1,28 @@
+HWPX Report Skills 0.1.1
+
+Based on hwpx-kit by 6aneffy.
+Copyright 2026 6aneffy (tkdgus990809@gmail.com)
+Source: https://github.com/6aneffy/hwpx-kit
+License: Apache License, Version 2.0 (see LICENSE).
+
+Maintained and modified by Sawyer Lee (@pinetreelic), 2026-10-16.
+Changes: renamed four skills; shared report style; numbered generation;
+fixed title-cell height; paragraph group spacing; portable packaging and installation.
+This is an independently modified distribution, not an official upstream release.
+
+Original skill mapping:
+gongmun-format -> public-report-style
+doc-create -> hwpx-create
+hwpx-form -> hwpx-edit
+office-export -> hwpx-to-office
+The format-convert and table-calc instructions are included as references only.
+Upstream licensing checked at commit 54a872a0a0b6ae924d9034dd2003519f6153a280;
+the original installed skill revision was not recorded. Installed CLI baseline: 0.13.1.
+No upstream NOTICE file was present in the repository root at that commit.
+
+External runtimes (not bundled):
+hwpx-kit-cli 0.13.1: Apache-2.0, https://github.com/6aneffy/hwpx-kit
+python-hwpx 2.29.2: Apache-2.0, https://github.com/airmang/python-hwpx
+kordoc 4.9.0: MIT, https://github.com/chrisryugj/kordoc
+Optional officecli is installed separately under its own license.
+No font binaries, government templates, or private institution documents are included.

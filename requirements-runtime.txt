@@ -1,0 +1,2 @@
+hwpx-kit-cli==0.13.1
+python-hwpx==2.29.2
