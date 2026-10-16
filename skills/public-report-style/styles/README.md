@@ -1,6 +1,7 @@
 # 문서 스타일 추가
 
 기존 `sectioned` 폴더를 새 이름으로 복사하고 `style.json`의 `id`를 폴더명과 같게 설정한다.
+원본 디자인 자산인 `components.json`도 함께 복사한다.
 `name`, `description`, `title_color`, `section_color`, `section_fill`을 수정하면
 `generate_numbered.py --list-styles`에 나타나며 `--style <id>`로 생성할 수 있다.
 색상은 `#RRGGBB`로 작성한다. 폴더에 `preview.png`를 넣으면 사용자 선택 때 함께 보여준다.

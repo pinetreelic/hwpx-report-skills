@@ -64,7 +64,7 @@ def main():
         with zipfile.ZipFile(hwpx) as z:
             section = ET.fromstring(z.read('Contents/section0.xml'))
             ns = {'p':'http://www.hancom.co.kr/hwpml/2011/paragraph', 'h':'http://www.hancom.co.kr/hwpml/2011/head'}
-            text = '\n'.join(e.text or '' for e in section.findall('.//p:t',ns))
+            text = '\n'.join(''.join(t.text or '' for t in p.findall('.//p:t',ns)) for p in section.findall('.//p:p',ns))
             for sentence in expected: assert sentence in text, (style,sentence)
             if style == 'sectioned':
                 assert 'Ⅰ. 추진 개요' in text and 'Ⅱ. 실행 계획' in text
@@ -75,6 +75,8 @@ def main():
                 assert any(e.get('type')=='DOUBLE_SLIM' for e in header.findall('.//h:topBorder',ns))
         subprocess.run([str(python), '-m', 'hwpx_kit.cli', 'render', str(hwpx), '--engine', 'kordoc',
                         '--out', str(output/(style+'.svg')), '--json'],env=env,check=True)
+    from verify_original_design import verify
+    verify(output / 'sectioned.hwpx', skills / 'public-report-style/styles/sectioned/components.json')
     print('Both designs preserve all content; section numbering, bullets, boxes and render passed.')
 
 
